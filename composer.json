@@ -1,0 +1,61 @@
+{
+    "name": "aybarsm/laravel-os-master",
+    "description": "A Laravel service provider package that acts as a central hub for managing and dispatching OS commands to multiple OS-Echo clients.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "aybarsm",
+        "laravel",
+        "operating-syetem",
+        "linux",
+        "windows",
+        "mac",
+        "macOS",
+        "Darwin",
+        "BSD",
+        "Debian",
+        "Ubuntu",
+        "Oracle Linux",
+        "AlmaLinux",
+        "Rocky Linux",
+        "Alpine",
+        "Command",
+        "Master"
+    ],
+    "homepage": "https://github.com/aybarsm/laravel-os-master",
+    "authors": [
+        {
+            "name": "Murat Aybars",
+            "email": "hello@aybarsm.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/contracts": "^10.0",
+        "aybarsm/laravel-os": "dev-main"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aybarsm\\Laravel\\OsMaster\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aybarsm\\Laravel\\OsMaster\\OsMasterServiceProvider"
+            ],
+            "aliases": {
+                "Os": "Aybarsm\\Laravel\\OsMaster\\Facades\\OsMaster"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
